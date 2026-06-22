@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AIME</title>
+    <meta name="description" content="Reach out to the Atlantic Institute of Marine Economy. Let's turn ocean potential into meaningful action.">
+    <!-- Google Fonts: Inter for body, Outfit for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Section 1: Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="Assets/Images/AIME LOGO.png" alt="AIME Logo">
+            </a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About AIME</a></li>
+                    <li><a href="index.html#programs">Programs</a></li>
+                    <li><a href="index.html#resources">Resources</a></li>
+                    <li><a href="index.html#partnerships">Partnerships</a></li>
+                    <li><a href="index.html#media">Media</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero" id="contact-hero">
+            <div class="contact-hero-inner">
+                <p class="contact-label-tag">Contact</p>
+                <h1 class="contact-hero-headline">
+                    Let's turn ocean<br>potential into<br>meaningful <em>action.</em>
+                </h1>
+            </div>
+        </section>
+
+        <!-- Contact Grid Section -->
+        <section class="contact-section" id="contact-section">
+            <div class="contact-grid">
+                
+                <!-- Left Column: Info & Fast Track -->
+                <div class="contact-info">
+                    <p class="contact-info-intro">
+                        Let's have a thoughtful conversation on sustainable blue economy initiatives.
+                    </p>
+                    <p class="contact-info-description">
+                        Whether you want to explore professional training, discuss investment opportunities, or collaborate on community development projects, we are here to bridge the gap and build systems that compound value over time.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <span class="contact-details-label">Direct Inquiries</span>
+                        <a href="mailto:info@aime.org" class="contact-details-email">info@aime.org</a>
+                    </div>
+
+                    <!-- WhatsApp CTA -->
+                    <div class="whatsapp-cta">
+                        <span class="whatsapp-cta-tag">Fast Track</span>
+                        <h3 class="whatsapp-cta-title">Prefer a faster conversation?</h3>
+                        <p class="whatsapp-cta-text">
+                            Reach out directly on WhatsApp for quick inquiries.
+                        </p>
+                        <!-- WhatsApp link ready for real number -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="whatsapp-cta-btn" id="cta-whatsapp">
+                            <span>Chat on WhatsApp</span>
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Premium Form -->
+                <div class="contact-form-wrapper">
+                    <!-- Web3Forms setup -->
+                    <form name="contact" action="https://api.web3forms.com/submit" method="POST" class="premium-form" id="contactForm" novalidate>
+                        <!-- Replace with your actual Web3Forms access key later -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New Inquiry from AIME Contact Page">
+                        <input type="checkbox" name="botcheck" id="" style="display: none;">
+                        
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" id="fullName" name="name" class="form-input" placeholder="Your name" required autocomplete="name">
+                            <span class="error-message" id="nameError" aria-live="assertive">Please enter your full name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress" class="form-label">Email Address</label>
+                            <input type="email" id="emailAddress" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+                            <span class="error-message" id="emailError" aria-live="assertive">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="messageText" class="form-label">Message</label>
+                            <textarea id="messageText" name="message" class="form-input form-textarea" placeholder="What initiative or challenge are you working on?" rows="5" required></textarea>
+                            <span class="error-message" id="messageError" aria-live="assertive">Please share some context about your project.</span>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn" id="btnSubmit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" aria-hidden="true"></span>
+                            <span class="material-symbols-outlined btn-icon" aria-hidden="true">arrow_outward</span>
+                        </button>
+                    </form>
+
+                    <!-- Success & Error State Notifications -->
+                    <div class="form-status" id="formStatus" aria-live="polite">
+                        <div class="form-status-inner">
+                            <div class="form-status-icon" id="formStatusIcon">✓</div>
+                            <div class="form-status-content">
+                                <h4 class="form-status-title" id="formStatusTitle">Message Sent</h4>
+                                <p class="form-status-text" id="formStatusText">Thank you. We have received your request and will respond shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col info-col">
+                <img src="Assets/Images/AIME LOGO.png" alt="AIME Logo" class="footer-logo">
+                <p>Building the Future of Africa's Marine Economy through knowledge, innovation, and sustainable development.</p>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Contact Info</h4>
+                <p>Kalaibiama, Opobo/Nkoro LGA<br>Rivers State, Nigeria</p>
+                <p class="mt-1">Phone: <a href="tel:+2348120660167">+234-81-2066-0167</a><br>Email: <a href="mailto:info@aime.org">info@aime.org</a></p>
+            </div>
+            <div class="footer-col social-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-socials">
+                    <li><a href="#">LinkedIn <span class="material-symbols-outlined">arrow_outward</span></a></li>
+                    <li><a href="#">X (Twitter) <span class="material-symbols-outlined">arrow_outward</span></a></li>
+                    <li><a href="#">Facebook <span class="material-symbols-outlined">arrow_outward</span></a></li>
+                    <li><a href="#">Instagram <span class="material-symbols-outlined">arrow_outward</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Atlantic Institute of Marine Economy. All rights reserved.</p>
+            <ul class="footer-legal">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
