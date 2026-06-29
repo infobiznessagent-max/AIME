@@ -1,0 +1,794 @@
+/* --- About Page Specific Styles --- */
+
+/* ========================================
+   SECTION: About Hero
+   Full-bleed 4K hero image with overlay
+   ======================================== */
+.about-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.about-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* Diagonal gradient that echoes the brand navy */
+  background: linear-gradient(
+    160deg,
+    rgba(45, 57, 129, 0.7) 0%,
+    rgba(26, 36, 86, 0.85) 50%,
+    rgba(7, 13, 30, 0.92) 100%
+  );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 5% 5rem;
+  max-width: 900px;
+}
+
+.about-label-tag {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.about-hero-headline {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  color: #ffffff;
+  letter-spacing: -2px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.about-hero-headline .highlight {
+  color: var(--secondary-color);
+}
+
+/* ========================================
+   SECTION: Introduction
+   ======================================== */
+.about-intro {
+  background-color: var(--primary-color);
+  padding: 6rem 5%;
+}
+
+.about-intro-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.about-intro-icon {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 210, 140, 0.12);
+  border: 1px solid rgba(240, 210, 140, 0.25);
+  border-radius: 50%;
+}
+
+.about-intro-icon .material-symbols-outlined {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.about-intro-text p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-intro-accent {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  margin-top: 2rem;
+  border-radius: 2px;
+  opacity: 0;
+}
+
+/* ========================================
+   SECTION: Vision & Mission
+   ======================================== */
+.about-vm {
+  background: linear-gradient(135deg, #fcfbf8 0%, #f0ece3 100%);
+  padding: 6rem 5%;
+}
+
+.about-vm-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-vm-header {
+  margin-bottom: 3.5rem;
+}
+
+.about-vm-label {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-vm-header h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+.about-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.about-vm-card {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(45, 57, 129, 0.08);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-vm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(45, 57, 129, 0.12);
+  border-color: rgba(45, 57, 129, 0.15);
+}
+
+.about-vm-card-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 57, 129, 0.05);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  transition: all 0.35s ease;
+}
+
+.about-vm-card:hover .about-vm-card-icon {
+  background: var(--primary-color);
+}
+
+.about-vm-card-icon .material-symbols-outlined {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  transition: color 0.35s ease;
+}
+
+.about-vm-card:hover .about-vm-card-icon .material-symbols-outlined {
+  color: var(--secondary-color);
+}
+
+.about-vm-card h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.about-vm-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.about-vm-card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-vm-card:hover .about-vm-card-accent {
+  transform: scaleX(1);
+}
+
+/* ========================================
+   SECTION: Leadership
+   ======================================== */
+.about-leadership {
+  background-color: #ffffff;
+  padding: 6rem 5%;
+}
+
+.about-leadership-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-leadership-label {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--primary-color), #1a2456);
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-leadership-left h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+.about-leadership-accent {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  margin-top: 1.5rem;
+  border-radius: 2px;
+}
+
+.about-leadership-right p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.about-leadership-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.leadership-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(45, 57, 129, 0.05);
+  border: 1px solid rgba(45, 57, 129, 0.1);
+  color: var(--primary-color);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.leadership-value:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.leadership-value .material-symbols-outlined {
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.leadership-value:hover .material-symbols-outlined {
+  color: var(--secondary-color);
+}
+
+/* ========================================
+   SECTION: Programs (About-page variant)
+   ======================================== */
+.about-programs {
+  background: linear-gradient(160deg, var(--primary-color) 0%, #1a2456 60%, #131b3e 100%);
+  padding: 6rem 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-programs::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(240, 210, 140, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-programs-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-programs-header {
+  margin-bottom: 2rem;
+}
+
+.about-programs-label {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-programs-header h2 {
+  font-size: 2.8rem;
+  color: var(--text-light);
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+.about-programs-text {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.about-programs-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-program-tile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.5rem;
+  color: var(--text-light);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(4px);
+}
+
+.about-program-tile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(240, 210, 140, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-program-tile .material-symbols-outlined {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+}
+
+/* ========================================
+   SECTION: Partnerships (About-page variant)
+   ======================================== */
+.about-partnerships {
+  background: linear-gradient(135deg, #fcfbf8 0%, #f0ece3 100%);
+  padding: 6rem 5%;
+}
+
+.about-partnerships-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-partnerships-label {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-partnerships-content h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.about-partnerships-content p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+
+.about-partnerships-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.about-partner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ffffff;
+  border: 1px solid rgba(45, 57, 129, 0.12);
+  color: var(--primary-color);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.about-partner-tag:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 57, 129, 0.15);
+}
+
+.about-partner-tag .material-symbols-outlined {
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.about-partner-tag:hover .material-symbols-outlined {
+  color: var(--secondary-color);
+}
+
+/* ========================================
+   SECTION: Blue Edge BootCamp
+   ======================================== */
+.about-blueedge {
+  background-color: #ffffff;
+  padding: 6rem 5%;
+}
+
+.about-blueedge-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-blueedge-label {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--primary-color), #1a2456);
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-blueedge-left h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.about-blueedge-edition {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary-color);
+  background: rgba(240, 210, 140, 0.15);
+  border: 1px solid rgba(240, 210, 140, 0.4);
+  padding: 0.35rem 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.about-blueedge-left p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.about-blueedge-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.blueedge-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(45, 57, 129, 0.03);
+  border: 1px solid rgba(45, 57, 129, 0.08);
+  padding: 0.75rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.blueedge-feature:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.blueedge-feature .material-symbols-outlined {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.blueedge-feature:hover .material-symbols-outlined {
+  color: var(--secondary-color);
+}
+
+/* Blue Edge Image */
+.about-blueedge-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 12%);
+  box-shadow: 0 24px 60px rgba(45, 57, 129, 0.2);
+}
+
+.about-blueedge-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-blueedge-image-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* ========================================
+   SECTION: Landmark Partnership Moment
+   ======================================== */
+.about-landmark {
+  background: linear-gradient(135deg, #fcfbf8 0%, #f0ece3 100%);
+  padding: 6rem 5%;
+}
+
+.about-landmark-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-landmark-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 12%);
+  box-shadow: 0 24px 60px rgba(45, 57, 129, 0.2);
+}
+
+.about-landmark-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-landmark-image-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.about-landmark-label {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-landmark-content h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.about-landmark-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.reveal-children > * {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-children.revealed > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-children.revealed > *:nth-child(2) { transition-delay: 0.12s; }
+.reveal-children.revealed > *:nth-child(3) { transition-delay: 0.19s; }
+.reveal-children.revealed > *:nth-child(4) { transition-delay: 0.26s; }
+.reveal-children.revealed > *:nth-child(5) { transition-delay: 0.33s; }
+
+.reveal-children.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active nav link styling */
+.nav-active {
+  color: var(--secondary-color) !important;
+  position: relative;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 900px) {
+  .about-hero {
+    min-height: 60vh;
+  }
+
+  .about-hero-headline {
+    font-size: 3rem;
+  }
+
+  .about-intro-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-vm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-vm-header h2,
+  .about-leadership-left h2,
+  .about-programs-header h2,
+  .about-partnerships-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-leadership-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-blueedge-inner,
+  .about-landmark-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-blueedge-left h2,
+  .about-landmark-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-blueedge-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .about-hero-headline {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+
+  .about-hero-content {
+    padding: 4rem 5% 3rem;
+  }
+
+  .about-programs-tiles {
+    flex-direction: column;
+  }
+
+  .about-partnerships-tags {
+    flex-direction: column;
+  }
+
+  .about-leadership-values {
+    flex-direction: column;
+  }
+}
